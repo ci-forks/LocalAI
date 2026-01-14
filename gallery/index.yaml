@@ -1,4 +1,29 @@
 ---
+- name: "arsenic-shahrazad-12b-v3"
+  url: "github:mudler/LocalAI/gallery/virtual.yaml@master"
+  urls:
+    - https://huggingface.co/mradermacher/Arsenic-Shahrazad-12B-v3-GGUF
+  description: |
+    The model `mradermacher/Arsenic-Shahrazad-12B-v3-GGUF` is a 12-billion parameter language model based on the Shahrazad architecture. It is optimized for efficiency using the GGUF format, designed for tasks like text generation, translation, and reasoning. The model is not the original author's version but a quantized variant tailored for deployment. For detailed specifications, refer to the Hugging Face repository's README, which provides training details and usage instructions.
+  overrides:
+    parameters:
+      model: llama-cpp/models/Arsenic-Shahrazad-12B-v3.Q4_K_M.gguf
+    name: Arsenic-Shahrazad-12B-v3-GGUF
+    backend: llama-cpp
+    template:
+      use_tokenizer_template: true
+    known_usecases:
+      - chat
+    function:
+      grammar:
+        disable: true
+    description: Imported from https://huggingface.co/mradermacher/Arsenic-Shahrazad-12B-v3-GGUF
+    options:
+      - use_jinja:true
+  files:
+    - filename: llama-cpp/models/Arsenic-Shahrazad-12B-v3.Q4_K_M.gguf
+      sha256: 065665ae64ccb3af6dcc279c8f0027b9cfcdc99aac373e8e2608fe9929121400
+      uri: https://huggingface.co/mradermacher/Arsenic-Shahrazad-12B-v3-GGUF/resolve/main/Arsenic-Shahrazad-12B-v3.Q4_K_M.gguf
 - name: "qwen3-vl-reranker-8b"
   url: "github:mudler/LocalAI/gallery/virtual.yaml@master"
   urls:
