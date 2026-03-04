@@ -1,4 +1,29 @@
 ---
+- name: "suri-qwen-3.1-30b-uncensored"
+  url: "github:mudler/LocalAI/gallery/virtual.yaml@master"
+  urls:
+    - https://huggingface.co/SpaceTimee/Suri-Qwen-3.1-30B-Uncensored-GGUF
+  description: |
+    AI model: suri-qwen-3.1-30b-uncensored
+  overrides:
+    parameters:
+      model: llama-cpp/models/suri-qwen-3.1-30b-uncensored-q4_k_m.gguf
+    name: Suri-Qwen-3.1-30B-Uncensored-GGUF
+    backend: llama-cpp
+    template:
+      use_tokenizer_template: true
+    known_usecases:
+      - chat
+    function:
+      grammar:
+        disable: true
+    description: Imported from https://huggingface.co/SpaceTimee/Suri-Qwen-3.1-30B-Uncensored-GGUF
+    options:
+      - use_jinja:true
+  files:
+    - filename: llama-cpp/models/suri-qwen-3.1-30b-uncensored-q4_k_m.gguf
+      sha256: 6ddbc3907401cd6a9908ae2ff33a298fc615e3347ea299726d246b4384c19300
+      uri: https://huggingface.co/SpaceTimee/Suri-Qwen-3.1-30B-Uncensored-GGUF/resolve/main/suri-qwen-3.1-30b-uncensored-q4_k_m.gguf
 - name: "q3.5-bluestar-27b"
   url: "github:mudler/LocalAI/gallery/virtual.yaml@master"
   urls:
